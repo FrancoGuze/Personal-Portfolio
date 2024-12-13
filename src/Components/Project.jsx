@@ -13,7 +13,7 @@ return (
       backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat'
     }} className="project">
-      <img src='src/Images/angle-down-solid.svg' />
+      <img src='./Images/angle-down-solid.svg' />
       <h3>{name}</h3>
 
 {techs ? 

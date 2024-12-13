@@ -58,10 +58,10 @@ function App() {
         </SectionComp>
 
         <SectionComp zone='projects-section' innerText='Projects' quant={10}>
-          <Project name='Pokedex' img='src/Images/Pokedex.jpg' />
-          <Project name='Palindrome Checker' img='src/Images/Palindrome-Checker.jpg' link='https://francoguze.github.io/Palindrome-Checker-freeCodeCamp/' />
-          <Project name='Pokedex' img='src/Images/Pokedex.jpg' />
-          <Project name='Pokedex' img='src/Images/Pokedex.jpg' techs = {['javascript','css3']}/>
+          <Project name='Pokedex' img='./Images/Pokedex.jpg' />
+          <Project name='Palindrome Checker' img='./Images/Palindrome-Checker.jpg' link='https://francoguze.github.io/Palindrome-Checker-freeCodeCamp/' />
+          <Project name='Pokedex' img='./Images/Pokedex.jpg' />
+          <Project name='Pokedex' img='./Images/Pokedex.jpg' techs = {['javascript','css3']}/>
 
         </SectionComp>
       </main>
