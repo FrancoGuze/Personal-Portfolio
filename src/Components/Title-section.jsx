@@ -7,7 +7,7 @@ export const TitleSection = () => {
             <h3>Front End Developer</h3>
           </div>
           <div className="img-area">
-            <img src="public\Images\my-image.jpg" alt="" className="profile-img" />
+            <img src=".\Images\my-image.jpg" alt="" className="profile-img" />
           </div>
           <aside className="buttons-area">
               <div className="cv-area">
