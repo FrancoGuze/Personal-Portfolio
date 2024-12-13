@@ -1,15 +1,13 @@
 import PropTypes from 'prop-types'
 
-export const SectionComp = ({ zone,innerText, cant, children }) => {
+export const SectionComp = ({ zone,innerText, quant, children }) => {
 
     const drawText = () => {
         let text = <div>&lt; {innerText} /&gt;</div>;
         let finalText = []
-        for (let i = 0; i < Number(cant); i++) {
-            console.log('bucle ', i)
+        for (let i = 0; i < quant; i++) {
             finalText.push(text)
         }
-        console.log(finalText)
         return finalText
     }
 
@@ -30,6 +28,6 @@ export const SectionComp = ({ zone,innerText, cant, children }) => {
 SectionComp.propTypes = {
     zone:PropTypes.string.isRequired,
     innerText: PropTypes.string.isRequired,
-    cant: PropTypes.number.isRequired,
-    children:PropTypes.children
+    quant: PropTypes.number,
+    children:PropTypes.node
 }

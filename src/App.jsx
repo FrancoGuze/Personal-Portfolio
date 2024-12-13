@@ -3,6 +3,7 @@ import { Card } from './Components/card'
 import { TitleSection } from './Components/Title-section'
 import { NavSection } from './Components/Nav-section'
 import { SectionComp } from './Components/Section-comp'
+import { Project } from './Components/Project'
 import './Styles/App.css'
 function App() {
   // const [count, setCount] = useState(0)
@@ -16,20 +17,20 @@ function App() {
       <main id='main'>
         <TitleSection />
 
-        <SectionComp zone='about-section' innerText='About Me' cant='9'>
+        <SectionComp zone='about-section' innerText='About Me' quant={9}>
           <h3 className="personal-data">
             Hi, my name is Franco and I am a <span>Front End Developer</span>. I am passionate about coding and web development, trying to improve my skills every day.
-             I have experience in <span>SEO</span> (Search Engine Optimization) on Tienda Nube E-commerce platforms, where I successfully ranked products among the top search results</h3>
+            I have experience in <span>SEO</span> (Search Engine Optimization) on Tienda Nube E-commerce platforms, where I successfully ranked products among the top search results</h3>
 
-            <ul className="languages">
-              <li className='title'>Languages</li>
-              <li>Spanish: Native</li>
-              <li>English: B2 level - Anglia Certified</li>
-              <li>Portuguese: Beginner - Currently Learning</li>
-            </ul>
+          <ul className="languages">
+            <li className='title'>Languages</li>
+            <li>Spanish: Native</li>
+            <li>English: B2 level - Anglia Certified</li>
+            <li>Portuguese: Beginner - Currently Learning</li>
+          </ul>
         </SectionComp>
 
-        <SectionComp zone='skills-section' innerText='Skills' cant='12'>
+        <SectionComp zone='skills-section' innerText='Skills' quant={12}>
 
           <div className='skills'>
             <h3 className="skills-title">Front-End</h3>
@@ -53,11 +54,14 @@ function App() {
             <h3 className="skills-title">Learning</h3>
             <Card name='Figma'/>
           </div> */}
-        
+
         </SectionComp>
 
-        <SectionComp zone ='projects-section' innerText='Projects' cant='10'> 
-
+        <SectionComp zone='projects-section' innerText='Projects' quant={10}>
+          <Project name='Pokedex' img='src/Images/Pokedex.jpg' />
+          <Project name='Palindrome Checker' img='src/Images/Palindrome-Checker.jpg' link='https://francoguze.github.io/Palindrome-Checker-freeCodeCamp/' />
+          <Project name='Pokedex' img='src/Images/Pokedex.jpg' />
+          <Project name='Pokedex' img='src/Images/Pokedex.jpg' techs = {['javascript','css3']}/>
 
         </SectionComp>
       </main>

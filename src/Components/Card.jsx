@@ -2,7 +2,6 @@ import PropTypes from 'prop-types'
 
 export const Card = ( { name, imgSrc,details }) =>{
 
-    details ? console.log('existe'):console.log('Nada');
 return(
     <div className='card' title={details}>
 <img src={imgSrc} alt="" className="card-img" loading='lazy'/>
