@@ -34,21 +34,21 @@ function App() {
 
           <div className='skills'>
             <h3 className="skills-title">Front-End</h3>
-            <Card name='HTML5' imgSrc='.\images\html5.png' />
-            <Card name='CSS3' imgSrc='.\images\css3.png' />
-            <Card name='JavaScript' imgSrc='.\images\javascript.png' />
-            <Card name='React' imgSrc='.\images\react.png' />
-            <Card name='Bootstrap' imgSrc='.\images\bootstrap.png' />
-            <Card name='JQuery' imgSrc='.\images\jquery.png' />
-            <Card name='WordPress' imgSrc='.\images\wordpress.png' />
-            <Card name='Redux' imgSrc='.\images\redux.png' />
+            <Card name='HTML5' imgSrc='public\images\html5.png' />
+            <Card name='CSS3' imgSrc='public\images\css3.png' />
+            <Card name='JavaScript' imgSrc='public\images\javascript.png' />
+            <Card name='React' imgSrc='public\images\react.png' />
+            <Card name='Bootstrap' imgSrc='public\images\bootstrap.png' />
+            <Card name='JQuery' imgSrc='public\images\jquery.png' />
+            <Card name='WordPress' imgSrc='public\images\wordpress.png' />
+            <Card name='Redux' imgSrc='public\images\redux.png' />
           </div>
           <div className='skills'>
             <h3 className="skills-title">Others</h3>
-            <Card name='Photoshop' imgSrc='.\images\photoshop-logo.png' />
-            <Card name='Excel' imgSrc='.\images\excel.png' />
-            <Card name='Tienda Nube' imgSrc='.\images\tiendanube.png' />
-            <Card name='SEO' imgSrc='.\images\seo.png' details='Search Engine Optimization' />
+            <Card name='Photoshop' imgSrc='public\images\photoshop-logo.png' />
+            <Card name='Excel' imgSrc='public\images\excel.png' />
+            <Card name='Tienda Nube' imgSrc='public\images\tiendanube.png' />
+            <Card name='SEO' imgSrc='public\images\seo.png' details='Search Engine Optimization' />
           </div>
           {/* <div className="skills">
             <h3 className="skills-title">Learning</h3>

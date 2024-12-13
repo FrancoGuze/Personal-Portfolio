@@ -19,7 +19,7 @@ return (
 {techs ? 
   <ul className="techs">
         {techs.map(element => <li key={element}> 
-          <img src={`src/Images/${element + '.png'}`}  alt={element} />
+          <img src={`./Images/${element + '.png'}`}  alt={element} />
         </li>
         )}
       </ul>
