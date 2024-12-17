@@ -1,13 +1,22 @@
-// import { useState } from 'react'
+import { useState } from 'react'
 import { Card } from './Components/card'
 import { TitleSection } from './Components/Title-section'
 import { NavSection } from './Components/Nav-section'
 import { SectionComp } from './Components/Section-comp'
 import { Project } from './Components/Project'
+
+
 import './Styles/App.css'
 function App() {
-  // const [count, setCount] = useState(0)
+  const [showCard, setShowCard] = useState(false)
 
+  const saludo = () => {
+    setShowCard(!showCard)
+  }
+
+  let content = showCard ?  'Show Less' :'Show More' ;
+
+  console.log(showCard ? 'mostrar' : 'oculto')
   return (
     <>
       <header>
@@ -58,11 +67,20 @@ function App() {
         </SectionComp>
 
         <SectionComp zone='projects-section' innerText='Projects' quant={10}>
-          <Project name='Pokedex' img='./Images/Pokedex.jpg' />
-          <Project name='Palindrome Checker' img='./Images/Palindrome-Checker.jpg' link='https://francoguze.github.io/Palindrome-Checker-freeCodeCamp/' />
-          <Project name='Pokedex' img='./Images/Pokedex.jpg' />
-          <Project name='Pokedex' img='./Images/Pokedex.jpg' techs = {['javascript','css3']}/>
+          <Project name='Pokedex' img='./Images/Pokedex.jpg' link='https://francoguze.github.io/Pokedex-Javascript/' techs={['html5', 'css3', 'javascript']} show />
+          <Project name='Palindrome Checker' img='./Images/Palindrome-Checker.jpg' link='https://francoguze.github.io/Palindrome-Checker-freeCodeCamp/' techs={['html5', 'css3', 'javascript']} show />
+          <Project name='Pokedex V2' img='./Images/freeCodeCamp-Pokedex.jpg' link='https://francoguze.github.io/freeCodeCamp-Pokedex/' techs={['html5', 'css3', 'javascript']} position='center' show />
+          <Project name='Random Quote Generator' img='./Images/Random-Quote-Generator.jpg' link='https://francoguze.github.io/Random-Quote-Machine-freeCodeCamp/' techs={['html5', 'css3', 'jquery', 'bootstrap']} show />
 
+          <Project name='Pokedex' img='./Images/Pokedex.jpg' link='https://francoguze.github.io/Pokedex-Javascript/' techs={['html5', 'css3', 'javascript']} show={showCard} />
+          <Project name='Palindrome Checker' img='./Images/Palindrome-Checker.jpg' link='https://francoguze.github.io/Palindrome-Checker-freeCodeCamp/' techs={['html5', 'css3', 'javascript']} show={showCard}/>
+          <Project name='Pokedex V2' img='./Images/freeCodeCamp-Pokedex.jpg' link='https://francoguze.github.io/freeCodeCamp-Pokedex/' techs={['html5', 'css3', 'javascript']} position='center' show={showCard}/>
+          <Project name='Pokedex V2' img='./Images/freeCodeCamp-Pokedex.jpg' link='https://francoguze.github.io/freeCodeCamp-Pokedex/' techs={['html5', 'css3', 'javascript']} position='center' show={showCard}/>
+
+          <button className="more" onClick={saludo}>
+            <h3>{content}</h3>
+            <svg style={{rotate: `${showCard ? '180deg' : ''}`}} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M201.4 374.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 306.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z" /></svg>
+          </button>
         </SectionComp>
       </main>
 
