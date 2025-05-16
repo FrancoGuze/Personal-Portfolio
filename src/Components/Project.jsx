@@ -11,7 +11,7 @@ export const Project = ({ name, img, link, techs, position, show }) => {
     <a href={link} style={{
       background: `url(${img})`, backgroundPosition: bgPos, display: display
 
-    }} className={'project'}>
+    }} className={'project'} target='_blank'>
       <img src='./Images/angle-down-solid.svg' alt='arrow' />
       <h3>{name}</h3>
 
