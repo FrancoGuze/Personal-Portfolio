@@ -17,7 +17,6 @@ function App() {
 
   let content = showCard ? 'Show Less' : 'Show More';
 
-  console.log(showCard ? 'mostrar' : 'oculto')
   return (
     <>
       <header>
@@ -32,7 +31,7 @@ function App() {
             Hi, I’m <span>Franco</span> – a <span>Junior Front End Developer</span> focused on building responsive, accessible, and visually engaging web applications. I have experience developing with modern technologies like <span>JavaScript</span>, <span>React</span>, <span>TypeScript</span>, <span>Tailwind CSS</span>, and <span>Redux</span>, and I’m always looking to deepen my knowledge and improve the quality of my work. <br /> <br />
             Over time, I’ve built and maintained web apps, gaining practical skills in both front-end development and <span>SEO optimization</span>, particularly for <span> Tienda Nube</span> e-commerce platforms. Thanks to these efforts, I’ve helped products rank among the top search results, driving real-world impact.<br /> <br />
             I'm also familiar with tools like <span>WordPress</span>, <span>Photoshop</span>, and <span>Excel</span>, and I'm currently expanding my knowledge in areas like <span> PostgreSQL</span>, <span>Bash</span>, and <span>Docker</span>. <br /> <br />
-             Whether I’m styling components or improving site performance, I’m committed to growing as a developer and delivering solid user experiences.
+            Whether I’m styling components or improving site performance, I’m committed to growing as a developer and delivering solid user experiences.
           </h3>
 
           <ul className="languages">
@@ -101,7 +100,9 @@ function App() {
           </button>
         </SectionComp>
       </main>
-      <FooterSection></FooterSection>
+      <FooterSection/>
+       
+    
     </>
   )
 }

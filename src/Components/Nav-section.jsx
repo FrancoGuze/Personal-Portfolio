@@ -7,7 +7,7 @@ export const NavSection = () => {
             <a href="#about-section">About Me</a>
             <a href="#skills-section">Skills</a>
             <a href="#projects-section">Projects</a>
-            <a href="#">Contact</a>
+            <a href="#footer-section">Contact</a>
           </div> </nav>
           
     )

@@ -11,8 +11,8 @@ export const TitleSection = () => {
           </div>
           <aside className="buttons-area">
               <div className="cv-area">
-                <a >CV - Español</a>
-                <a >CV - English</a>
+                <a href="./Images/CV_Franco_Guze.pdf" download={"CV_Franco_Guze.pdf"}>CV - Español</a>
+                {/* <a >CV - English</a> */}
               </div>
               <div className="small-btns">
                 <a href="https://www.linkedin.com/in/franco-guze-9a697426b/" target="_blank">

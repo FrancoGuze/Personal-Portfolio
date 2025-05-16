@@ -1,7 +1,7 @@
 @import url('./fonts.scss');
 
 
-/*Colors Codes*/
+
 
 * {
   margin: 0;
@@ -15,15 +15,16 @@
   }
 }
 
+/*Colors Codes*/
 $background: #000014;
-$light-background: #e2e2e228;
+$background-light: #202036;
+$opacity-background: #e2e2e228;
 $border: #d1a22a;
 
 body {
   background-color: $background;
   color: white;
   font-family: 'Comfortaa';
-  height: 400vh;
 }
 
 main {
@@ -46,7 +47,7 @@ header {
     justify-content: space-between;
     padding-block: 9px;
     padding-inline: clamp(100px, 10vw, 180px);
-    background-color: $light-background;
+    background-color: $opacity-background;
     backdrop-filter: blur(5px);
     z-index: 100;
 
@@ -109,7 +110,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 40px;
-  background-color: $light-background;
+  background-color: $opacity-background;
 }
 
 .text-area {
@@ -167,7 +168,7 @@ header {
     line-height: 40px;
     border-radius: 10px;
     font-size: 20px;
-
+    text-decoration: none;
   }
 
   .cv-area a:first-child {
@@ -207,11 +208,11 @@ header {
   margin-top: 80px;
   width: 100%;
   min-height: 100px;
-  background-color: $light-background;
+  background-color: $opacity-background;
 }
 
 .heading-bg {
-  background-color: $light-background;
+  background-color: $opacity-background;
   position: absolute;
   left: -14em;
   top: 35px;
@@ -232,7 +233,7 @@ header {
 
     div {
       font-size: 26px;
-      color: $light-background;
+      color: $opacity-background;
       width: fit-content;
       display: inline-block;
       margin-inline: 5px;
@@ -249,7 +250,7 @@ header {
 
     span {
       font-weight: 700;
-      font-size:1.01em;
+      font-size: 1.01em;
       color: $border;
     }
   }
@@ -278,7 +279,7 @@ header {
 
 
   .skills {
-    background-color: $light-background;
+    background-color: $opacity-background;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -300,7 +301,7 @@ header {
     min-height: 30px;
     display: flex;
     align-items: center;
-    background-color: $light-background;
+    background-color: $opacity-background;
     padding: 6px 1px;
     transition: all .3s ease;
 
@@ -404,9 +405,9 @@ header {
 
 
   .more {
-   flex: 1 0 100%;
+    flex: 1 0 100%;
     padding-block: 6px;
-    background-color: $light-background;
+    background-color: $opacity-background;
     border: none;
     margin: 0 auto;
     text-align: center;
@@ -433,7 +434,134 @@ header {
   }
 }
 
+footer {
+  background-color: $background-light;
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+  position: relative;
+  padding-block: 3em;
 
+  .decoration {
+    width: 30px;
+    height: 30px;
+    background-color: inherit;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50% 50%);
+    transform-origin: 0 0;
+
+    rotate: 45deg;
+  }
+
+  h1 {
+    flex: 1 0 100%;
+    font-weight: 700;
+    text-align: center;
+    font-size: 45px;
+    position: relative;
+    margin-bottom: 1em;
+    background: linear-gradient(90deg, white 50%, $border 50%);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: default;
+    transition: all .7s ease;
+  }
+
+  h1:hover {
+    background-position: -100% 0;
+  }
+
+  .contact-info {
+
+    text-align: center;
+    flex: 1 1 49%;
+    font-size: 20px;
+
+    a {
+      position: relative;
+      width: fit-content;
+      text-decoration: none;
+
+    }
+
+    a:any-link {
+      color: inherit;
+    }
+
+    a:hover {
+      color: $border;
+    }
+
+    a::before {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      right: 0;
+      bottom: -4px;
+      height: 2px;
+      background: linear-gradient(270deg, $border 0%, $border 50%, transparent 50%, transparent 100%);
+      background-size: 200% 100%;
+      transition: all .3s ease;
+
+    }
+
+    a:hover::before {
+      background-position: -100% 0;
+    }
+
+
+  }
+
+  .small-btns {
+
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+
+    a {
+      height: 40px;
+      background-color: $opacity-background;
+      border-radius: 50%;
+      padding: 5px;
+      aspect-ratio: 1/1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: all .3s ease;
+
+      svg {
+        height: 70%;
+        width: 70%;
+        fill: white;
+
+      }
+
+      &:hover {
+        scale: 1.1;
+        background-color: $border;
+        border-radius: 25px;
+
+        svg {
+          fill: black;
+        }
+      }
+    }
+
+  }
+
+}
 
 @keyframes slide {
   from {
@@ -499,10 +627,12 @@ header {
       }
     }
   }
-.projects-section{
-  .project{
-    flex:0 1 70% ;
-  }}
+
+  .projects-section {
+    .project {
+      flex: 0 1 70%;
+    }
+  }
 }
 
 @media (max-width:490px) {
