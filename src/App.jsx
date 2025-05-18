@@ -72,7 +72,7 @@ function App() {
             <h3 className="skills-title">Learning</h3>
             <Card name='PostgreSQL' imgSrc='.\Images\postgresql.png' />
             <Card name='Bash' imgSrc='.\Images\bash.png' />
-            <Card name='Docker' imgSrc='.\Images\docker_w.png' />
+            <Card name='Docker' imgSrc='.\Images\docker.png' />
           </div>
 
         </SectionComp>
@@ -102,7 +102,9 @@ function App() {
       </main>
       <FooterSection/>
        
-    
+    <img className='background_waves el1' src="./Images/background_waves.png" alt="wave" />
+    <img className='background_waves el2' src="./Images/background_waves.png" alt="wave" />
+    <img className='background_waves el3' src="./Images/background_waves.png" alt="wave" />
     </>
   )
 }

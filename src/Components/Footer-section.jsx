@@ -4,7 +4,7 @@ export const FooterSection = () => {
     return (
         <footer id="footer-section">
             <div className='decoration'></div>
-            <h1>CONTACT ME!</h1>
+            
 
             <div className='contact-info' ><a href='https://api.whatsapp.com/send?phone=5491127026690' target='_blank'>+54 911 2702-6690</a></div>
 
