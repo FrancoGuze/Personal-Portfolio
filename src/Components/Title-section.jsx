@@ -1,10 +1,10 @@
-export const TitleSection = () => {
+export const TitleSection = ({currLang}) => {
 
     return(
         <section id='title-section' className="title-section">
           <div className="text-area">
             <h2>Franco Guze</h2>
-            <h3>Front End Developer</h3>
+            <h3>{currLang == 'en' ? "Front End Developer": "Desarrollador Front End"}</h3>
           </div>
           <div className="img-area">
             <img src=".\Images\my-image.jpg" alt="" className="profile-img" />
