@@ -1,7 +1,4 @@
-@import url('./fonts.scss');
-
-
-
+@import url("./fonts.scss");
 
 * {
   margin: 0;
@@ -18,7 +15,7 @@
 /*Colors Codes*/
 $background: #000014;
 $background-light: #202036;
-$opacity-background: #e2e2e228;
+$opacity-light-background: #e2e2e228;
 $border: #d1a22a;
 
 #root {
@@ -29,11 +26,12 @@ $border: #d1a22a;
 body {
   background-color: $background;
   color: white;
-  font-family: 'Comfortaa';
+  font-family: "Comfortaa";
   overflow-x: hidden;
-
 }
-
+body:has(dialog[open]){
+  overflow-y: hidden;
+}
 main {
   position: relative;
   padding-inline: 14em;
@@ -42,11 +40,9 @@ main {
   flex-direction: column;
   justify-content: center;
   overflow-x: hidden;
-
 }
 
 header {
-
   .nav-section {
     max-width: 100vw;
     position: fixed;
@@ -56,7 +52,7 @@ header {
     justify-content: space-between;
     padding-block: 9px;
     padding-inline: 90px;
-    background-color: $opacity-background;
+    background-color: $opacity-light-background;
     backdrop-filter: blur(5px);
     height: 50px;
     z-index: 100;
@@ -79,7 +75,7 @@ header {
       display: block;
 
       span {
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
       }
     }
 
@@ -104,16 +100,15 @@ header {
       a {
         font-size: clamp(14px, 3vw, 20px);
         text-decoration: none;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
         padding: 5px 9px;
         border-radius: 15px;
         white-space: nowrap;
-
       }
 
       a:hover {
         background-color: $border;
-        color: black
+        color: black;
       }
 
       .lang-area {
@@ -132,7 +127,7 @@ header {
           overflow: hidden;
           border-radius: 10px;
           border: 1px solid white;
-          transition: all .1s ease;
+          transition: all 0.1s ease;
 
           li {
             font-size: 12px;
@@ -145,11 +140,11 @@ header {
 
           &:hover {
             max-height: 44px;
-            background-color: $opacity-background;
+            background-color: $opacity-light-background;
           }
 
           &::before {
-            content: '';
+            content: "";
             position: absolute;
             right: 2px;
             top: 5px;
@@ -158,7 +153,7 @@ header {
             background-image: url("./Images/angle-down-solid.svg");
             background-repeat: no-repeat;
             filter: invert(1);
-            transition: all .2s ease;
+            transition: all 0.2s ease;
           }
 
           &:hover::before {
@@ -168,14 +163,9 @@ header {
           li:hover {
             background-color: #d1a22a81;
           }
-
-
         }
       }
-
     }
-
-
   }
 }
 
@@ -188,7 +178,7 @@ header {
   flex-wrap: wrap;
   justify-content: space-between;
   row-gap: 40px;
-  background-color: $opacity-background;
+  background-color: $opacity-light-background;
 }
 
 .text-area {
@@ -209,7 +199,7 @@ header {
     width: 200px;
     border: 4px solid $border;
     border-radius: 450px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
   }
 
   .profile-img:hover {
@@ -231,7 +221,7 @@ header {
     height: 40px;
     background-color: transparent;
     border: 2px solid $border;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
   }
 
@@ -267,9 +257,8 @@ header {
     scale: 1.15;
 
     svg {
-      fill: black
+      fill: black;
     }
-
   }
 
   svg {
@@ -286,11 +275,11 @@ header {
   margin-top: 80px;
   width: 100%;
   min-height: 100px;
-  background-color: $opacity-background;
+  background-color: $opacity-light-background;
 }
 
 .heading-bg {
-  background-color: $opacity-background;
+  background-color: $opacity-light-background;
   position: absolute;
   left: -14em;
   top: 35px;
@@ -302,7 +291,6 @@ header {
     display: inline-block;
     white-space: nowrap;
     animation: 15s slide infinite linear;
-
   }
 
   .background-heading {
@@ -311,15 +299,13 @@ header {
 
     div {
       font-size: 26px;
-      color: $opacity-background;
+      color: $opacity-light-background;
       width: fit-content;
       display: inline-block;
       margin-inline: 5px;
     }
   }
 }
-
-
 
 .about-section {
   .personal-data {
@@ -355,9 +341,8 @@ header {
   flex-wrap: wrap;
   gap: 20px;
 
-
   .skills {
-    background-color: $opacity-background;
+    background-color: $opacity-light-background;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -379,16 +364,14 @@ header {
     min-height: 30px;
     display: flex;
     align-items: center;
-    background-color: $opacity-background;
+    background-color: $opacity-light-background;
     padding: 6px 1px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
 
     img {
       height: 30px;
       margin-inline: 3px;
     }
-
-
   }
 
   .card:hover {
@@ -396,30 +379,117 @@ header {
   }
 }
 
-
-
 .projects-section {
+  position: relative;
   display: flex;
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
+  
+  dialog {
+    border: none;
+    background:#000014d8;
+    //  rgba(120, 119, 133, 0.95);
+    position: fixed;
+    color: white;
+    inset: 0;
+    justify-self: center;
+    align-self: center;
+    padding: 20px 15px;
+    margin: 0;
+    width: 70vw;
+    height: auto;
+    z-index: 999;
+    #close-dialog:hover > svg {
+      color: rgb(117, 117, 117);
+      rotate: 90deg;
+      transition: all ease 0.3s;
+    }
+    #close-dialog {
+      background: none;
+      border: none;
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      svg {
+        color: white;
+      }
+    }
+    .techs-ul-father {
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      font-size: 20px;
+      align-items: center;
+      gap: 10px;
+    }
+    h3 {
+      font-size: 24px;
+      margin-bottom: 4px;
+      display: block;
+    }
+    h4 {
+      margin-left: 4px;
+      margin-block: 7px;
+      font-size: 20px;
+      display: block;
+    }
+    p {
+      margin-left: 4px;
+      margin-block: 6px;
+      a {
+        color: rgb(65, 65, 250);
+        transition: color ease 0.1s;
+      }
+      a:hover {
+        color: rgb(100, 100, 247);
+      }
+    }
+    span {
+      color: white;
+      transition: all ease .1s;
+      cursor:default
+    }
+    span:hover{
+      color:$border
+    }
 
+    .techs-ul-element {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-items: center;
+      align-items: center;
+      gap: 8px;
+      li {
+        img {
+          width: 24px;
+        }
+      }
+    }
+  }
+  dialog::backdrop {
+    background: rgba(0, 0, 0, 0.18); /* semi-transparent red */
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px); /* Safari */
+  }
   .project {
+    border: none;
     background-size: cover !important;
     background-repeat: no-repeat !important;
     flex: 0 1 40%;
     margin: 5px;
     height: 250px;
     position: relative;
-
+    cursor: pointer;
     justify-content: center;
     align-items: flex-end;
     text-decoration: none;
     color: white;
     z-index: 10;
-    transition: all .25s ease;
+    transition: all 0.25s ease;
 
-    >img {
+    > img {
       position: absolute;
 
       opacity: 0.5;
@@ -427,9 +497,8 @@ header {
       width: 100%;
       height: 15%;
 
-      transition: all .25s ease-in;
+      transition: all 0.25s ease-in;
     }
-
 
     h3 {
       padding-block: 5px;
@@ -451,13 +520,12 @@ header {
       background-color: transparent;
       translate: 0 -100%;
       z-index: 5;
-      transition: all .5s ease-in-out;
+      transition: all 0.5s ease-in-out;
 
       img {
         height: 30px;
         opacity: 0;
-        transition: opacity .3s ease-in;
-
+        transition: opacity 0.3s ease-in;
       }
     }
   }
@@ -465,7 +533,7 @@ header {
   .project:hover {
     scale: 1.05;
 
-    >img {
+    > img {
       top: 10%;
       opacity: 0;
     }
@@ -481,23 +549,21 @@ header {
     }
   }
 
-
   .more {
     flex: 1 0 100%;
     padding-block: 6px;
-    background-color: $opacity-background;
+    background-color: $opacity-light-background;
     border: none;
     margin: 0 auto;
     text-align: center;
     font-size: 12px;
-    transition: all .3s ease;
+    transition: all 0.3s ease;
     cursor: pointer;
 
     svg {
       margin-top: -5px;
       height: 30px;
-      transition: all .3s ease;
-
+      transition: all 0.3s ease;
     }
   }
 
@@ -537,10 +603,7 @@ footer {
     rotate: 45deg;
   }
 
-
-
   .contact-info {
-
     text-align: center;
     flex: 1 1 25%;
     font-size: 20px;
@@ -549,7 +612,6 @@ footer {
       position: relative;
       width: fit-content;
       text-decoration: none;
-
     }
 
     a:any-link {
@@ -561,24 +623,27 @@ footer {
     }
 
     a::before {
-      content: '';
+      content: "";
       position: absolute;
       display: block;
       left: 0;
       right: 0;
       bottom: -4px;
       height: 2px;
-      background: linear-gradient(270deg, $border 0%, $border 50%, transparent 50%, transparent 100%);
+      background: linear-gradient(
+        270deg,
+        $border 0%,
+        $border 50%,
+        transparent 50%,
+        transparent 100%
+      );
       background-size: 200% 100%;
-      transition: all .3s ease;
-
+      transition: all 0.3s ease;
     }
 
     a:hover::before {
       background-position: -100% 0;
     }
-
-
   }
 
   .small-btns {
@@ -592,20 +657,19 @@ footer {
 
     a {
       height: 40px;
-      background-color: $opacity-background;
+      background-color: $opacity-light-background;
       border-radius: 50%;
       padding: 5px;
       aspect-ratio: 1/1;
       display: flex;
       justify-content: center;
       align-items: center;
-      transition: all .3s ease;
+      transition: all 0.3s ease;
 
       svg {
         height: 70%;
         width: 70%;
         fill: white;
-
       }
 
       &:hover {
@@ -618,11 +682,8 @@ footer {
         }
       }
     }
-
   }
-
 }
-
 
 .background_waves {
   filter: brightness(0.5);
@@ -659,39 +720,30 @@ footer {
   to {
     transform: translateX(-100%);
   }
-
 }
 
-@media (max-width:1290px) and (min-width:901px) {
+@media (max-width: 1290px) and (min-width: 901px) {
   .nav-section {
     padding-inline: 30px;
-    .nav-items{
+    .nav-items {
       margin-right: 20px;
-      
-      
     }
-  
-
   }
 
   main {
     padding-inline: 4em;
 
-
     .text-area {
       h2 {
         font-size: clamp(40px, 5vw, 80px);
-
       }
 
       h3 {
         font-size: clamp(20px, 2.5vw, 60px);
-
       }
     }
 
     .img-area {
-
       .profile-img {
         width: 150px;
         height: 150px;
@@ -702,21 +754,18 @@ footer {
       margin-top: 40px;
     }
   }
-
 }
 
-@media (max-width:900px) {
+@media (max-width: 900px) {
   main {
     padding-inline: 2em;
     margin: 0 auto;
   }
 
   header {
-
     .nav-section {
       width: 100vw;
       padding-inline: 30px;
-    
 
       .nav-title {
         margin: 0;
@@ -726,13 +775,12 @@ footer {
         display: flex;
         z-index: 700;
 
-        transition: all .3s ease;
+        transition: all 0.3s ease;
 
         &:active {
           filter: invert(0);
           scale: 1.04;
           color: black;
-
         }
       }
 
@@ -749,7 +797,7 @@ footer {
         align-items: center;
         background-color: #4e4e4e9d;
         border-left: 3px solid $border;
-        transition: all .3s ease;
+        transition: all 0.3s ease;
 
         a {
           z-index: 400;
@@ -758,7 +806,6 @@ footer {
           padding-block: 15px;
           width: 100%;
           text-align: center;
-
         }
 
         .lang-area {
@@ -781,12 +828,10 @@ footer {
 
   .title-section {
     justify-content: space-around;
-
   }
 }
 
-@media (max-width:630px) {
-
+@media (max-width: 630px) {
   .nav-section {
     width: 100vw;
   }
@@ -801,7 +846,6 @@ footer {
   }
 
   .skills-section {
-
     .skills {
       padding: 5px;
 
@@ -818,18 +862,15 @@ footer {
   }
 }
 
-@media (max-width:490px) {
-
+@media (max-width: 490px) {
   #root {
     overflow-x: hidden;
   }
-
 
   .title-section {
     justify-content: center;
     gap: 10px;
     padding-inline: 30px;
-
 
     .img-area {
       order: 0;
@@ -875,7 +916,6 @@ footer {
       padding-inline: 10px;
       padding-bottom: 15px;
     }
-
   }
 
   .projects-section {
@@ -894,12 +934,10 @@ footer {
     gap: 2em;
 
     .contact-info {
-
       flex: 1 0 100%;
     }
 
     .small-btns {
-
       gap: 30px;
 
       a {
@@ -907,6 +945,4 @@ footer {
       }
     }
   }
-
-
 }

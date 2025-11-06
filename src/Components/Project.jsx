@@ -1,35 +1,59 @@
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-export const Project = ({ name, img, link, techs, position, show }) => {
-
-
-
-  const bgPos = position ? position : 'center'
-  const display = show ? 'flex' : 'none'
+export const Project = ({
+  dialogHandler,
+  dialogDataHandler,
+  description,
+  name,
+  img,
+  link,
+  techs,
+  position,
+  show,
+}) => {
+  const bgPos = position ? position : "center";
+  const display = show ? "flex" : "none";
   return (
-
-    <a href={link} style={{
-      background: `url(${img})`, backgroundPosition: bgPos, display: display
-
-    }} className={'project'} target='_blank'>
-      <img src='./Images/angle-down-solid.svg' alt='arrow' />
+    <button
+      onClick={() => {
+        dialogDataHandler({
+          title: name,
+          description: description,
+          techs: techs,
+          link: link,
+        });
+        setTimeout(() => dialogHandler(true), 50);
+      }}
+      style={{
+        background: `url(${img})`,
+        backgroundPosition: bgPos,
+        display: display,
+      }}
+      className={"project"}
+      target="_blank"
+    >
+      <img src="./Images/angle-down-solid.svg" alt="arrow" />
       <h3>{name}</h3>
 
-      {techs ?
+      {techs ? (
         <ul className="techs">
-          {techs.map(element => <li key={element}>
-            <img src={`./Images/${element + '.png'}`} alt={element} loading='lazy' />
-          </li>
-          )}
+          {techs.map((element) => (
+            <li key={element}>
+              <img
+                key={element}
+                src={`./Images/${element + ".png"}`}
+                alt={element}
+                loading="lazy"
+              />
+            </li>
+          ))}
         </ul>
-        : ''}
-
-    </a>
-
-
-  )
-}
-
+      ) : (
+        ""
+      )}
+    </button>
+  );
+};
 
 Project.propTypes = {
   name: PropTypes.string.isRequired,
@@ -37,6 +61,5 @@ Project.propTypes = {
   link: PropTypes.string,
   techs: PropTypes.array,
   position: PropTypes.string,
-  show: PropTypes.bool
-
-}
+  show: PropTypes.bool,
+};
