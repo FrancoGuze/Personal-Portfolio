@@ -4,7 +4,7 @@ export const TitleSection = ({currLang}) => {
         <section id='title-section' className="title-section">
           <div className="text-area">
             <h2>Franco Guze</h2>
-            <h3>{currLang == 'en' ? "Front End Developer": "Desarrollador Front End"}</h3>
+            <h3>{currLang == 'en' ? "Full Stack Web Developer": "Desarrollador Web Full Stack"}</h3>
           </div>
           <div className="img-area">
             <img src=".\Images\my-image.jpg" alt="" className="profile-img" />
