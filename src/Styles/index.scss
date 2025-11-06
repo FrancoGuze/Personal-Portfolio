@@ -29,7 +29,7 @@ body {
   font-family: "Comfortaa";
   overflow-x: hidden;
 }
-body:has(dialog[open]){
+body:has(dialog[open]) {
   overflow-y: hidden;
 }
 main {
@@ -385,14 +385,18 @@ header {
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
-  
+
   dialog {
     border: none;
-    background:#000014d8;
+    background: #000014d8;
     //  rgba(120, 119, 133, 0.95);
     position: fixed;
     color: white;
     inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     justify-self: center;
     align-self: center;
     padding: 20px 15px;
@@ -447,11 +451,11 @@ header {
     }
     span {
       color: white;
-      transition: all ease .1s;
-      cursor:default
+      transition: all ease 0.1s;
+      cursor: default;
     }
-    span:hover{
-      color:$border
+    span:hover {
+      color: $border;
     }
 
     .techs-ul-element {
