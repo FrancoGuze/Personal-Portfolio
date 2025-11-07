@@ -127,8 +127,8 @@ export const ProjectsArea = ({ lang }) => {
           }
           img="./Images/LaSantolina.png"
           position={"center"}
-          link="https://francoguze.github.io/Pokedex-Javascript/"
-          techs={["nextjs", "mongodb", "tailwind", "typescript", "html5"]}
+          link="https://la-santolina.vercel.app/tienda"
+          techs={["nextjs", "mongodb", "tailwind", "typescript", "html5",'aws',"figma"]}
           show
           description={
             lang === "en"
