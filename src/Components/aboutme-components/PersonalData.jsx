@@ -4,7 +4,7 @@ export const PersonalData = ({ lang }) => {
   return (
     <SectionComp
       zone="about-section"
-      innerText={lang == "en" ? "About Me" : "Sobre mi"}
+      innerText={lang == "en" ? "About Me" : "Sobre mí"}
       quant={9}
     >
       <h3 className="personal-data">
@@ -33,7 +33,7 @@ export const PersonalData = ({ lang }) => {
             y actualmente estoy ampliando mis conocimientos en áreas como{" "}
             <span>Bash</span> y <span>Docker</span>. <br /> <br />
             Estoy firmemente comprometido a crecer como desarrollador y ampliar
-            mis conocimientos en las areas del desarrollo web, y así poder
+            mis conocimientos en las áreas del desarrollo web y así poder
             ofrecer un mejor servicio a los usuarios.
           </>
         ) : (
