@@ -1,0 +1,188 @@
+{
+  "eyebrow": "Proyectos",
+  "title": "Trabajos Seleccionados",
+  "description": "Una colección de aplicaciones full-stack y frontend que demuestran arquitectura de software, visualización de datos y diseño centrado en el usuario.",
+  "sections": {
+    "featured": "Proyectos Destacados",
+    "additional": "Proyectos Adicionales"
+  },
+  "links": {
+    "liveDemo": "Demo en Vivo",
+    "source": "Código Fuente"
+  },
+  "items": [
+    {
+      "key": "appointment-management-platform",
+      "title": "Plataforma de Gestión de Turnos",
+      "description": "Plataforma full-stack de gestión de turnos construida con Next.js y TypeScript, que combina interfaz frontend y rutas de API del lado del servidor en una arquitectura unificada. El sistema incluye autenticación basada en roles, generación automática de turnos mediante GitHub Actions y persistencia de datos con PostgreSQL a través de Supabase.",
+      "image": "/images/projects/appointment-management-platform.png",
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Supabase",
+        "PostgreSQL",
+        "GitHub Actions",
+        "AI-assisted Development",
+        "Full-stack"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este proyecto implementa una plataforma full-stack para la gestión de turnos utilizando Next.js, donde tanto la interfaz frontend como las rutas de API del backend están integradas dentro de la misma aplicación. El sistema permite a los usuarios registrarse, autenticarse, explorar horarios disponibles y reservar o gestionar turnos mediante un flujo estructurado diseñado para evitar conflictos de horario y mantener la consistencia en la agenda.",
+          "El control de acceso basado en roles divide la plataforma en diferentes experiencias de usuario, incluyendo paneles administrativos y profesionales para gestionar horarios, turnos y disponibilidad. La lógica del backend se encarga de la validación, autorización y gestión del ciclo de vida de los turnos mientras interactúa con una base de datos PostgreSQL mediante los servicios de Supabase.",
+          "Para automatizar la gestión de horarios, se utilizan GitHub Actions que generan periódicamente nuevos turnos basados en reglas predefinidas. Esta automatización en segundo plano asegura la actualización continua de disponibilidad sin intervención manual, demostrando la integración entre flujos de CI y operaciones de datos a nivel de aplicación.",
+          "El proyecto también fue desarrollado como una exploración de flujos de trabajo de desarrollo asistidos por IA utilizando un asistente de programación basado en CLI. Se utilizaron prompts estructurados, información contextual del proyecto e instrucciones iterativas para guiar tareas de desarrollo y refactorización, manteniendo al mismo tiempo control manual sobre las decisiones arquitectónicas y el diseño general del sistema."
+        ],
+        "images": ["/images/projects/appointment-management-platform.png","/images/projects/appointment-management-platform.png","/images/projects/appointment-management-platform.png","/images/projects/appointment-management-platform.png"]
+      },
+      "liveUrl": "https://appointment-management-platform.vercel.app/",
+      "repoUrl": [
+        "https://github.com/FrancoGuze/appointment-management-platform"
+      ]
+    },
+    {
+      "key": "videochat-app",
+      "title": "Aplicación de Videollamadas (WebRTC)",
+      "description": "Plataforma de comunicación por video peer-to-peer construida con WebRTC para transmisión de medios en tiempo real y Socket.io para la señalización entre clientes. El sistema gestiona la negociación de conexión, los eventos del ciclo de vida de la sesión y la actualización dinámica de flujos de medios dentro de una interfaz React responsiva.",
+      "image": "/photos/videochatappfrontend.netlify.app.png",
+      "tags": [
+        "React",
+        "Tailwindcss",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "WebRTC",
+        "Socket.io",
+        "P2P",
+        "Full-stack"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este proyecto implementa un sistema de comunicación por video peer-to-peer utilizando WebRTC para el streaming directo de medios entre clientes y un servidor de señalización Node.js/Express basado en Socket.io. El frontend en React gestiona el estado de la sesión, las interacciones del usuario y el renderizado dinámico de los streams de video locales y remotos dentro de una interfaz responsiva.",
+          "Se utilizaron las APIs nativas del navegador para audio y video con el fin de controlar el estado del micrófono y la cámara de cada participante. Cuando un usuario activa o desactiva sus dispositivos multimedia, se envían eventos de señalización para que los pares conectados puedan actualizar los streams que reciben. Uno de los principales desafíos fue implementar el flujo de señalización necesario para la negociación de WebRTC, incluyendo el intercambio de ofertas y respuestas y la gestión del ciclo de vida de la conexión entre pares.",
+          "El proceso de conexión también maneja el intercambio de candidatos ICE entre pares para descubrir rutas de red viables que permitan establecer la conexión P2P directa. La información de candidatos se transmite a través del servidor de señalización para que ambos clientes puedan probar progresivamente diferentes rutas y seleccionar la más adecuada, permitiendo una comunicación estable incluso en entornos de red complejos como NAT o conexiones móviles."
+        ],
+        "images": []
+      },
+      "liveUrl": "https://videochatappfrontend.netlify.app/",
+      "repoUrl": [
+        "https://github.com/FrancoGuze/Videochat-App",
+        "https://github.com/FrancoGuze/Videochat-App-Backend"
+      ]
+    },
+    {
+      "key": "chat-app",
+      "title": "Aplicación de Chat en Tiempo Real",
+      "description": "Plataforma full-stack de mensajería en tiempo real construida con un cliente React y TypeScript y un backend Node.js/Express. El sistema combina APIs REST y comunicación basada en WebSockets para ofrecer mensajería instantánea, actualización de presencia de usuarios e historial persistente de conversaciones respaldado por PostgreSQL.",
+      "image": "/photos/app-de-mensajeria.netlify2.png",
+      "tags": [
+        "React",
+        "Tailwindcss",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "WebSockets",
+        "Supabase",
+        "PostgreSQL",
+        "Full-stack"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este proyecto implementa un sistema de chat en tiempo real utilizando una arquitectura cliente-servidor donde un frontend en React se comunica con un backend construido con Node.js y Express. La aplicación incluye autenticación, sesiones de usuario, gestión de conversaciones y envío instantáneo de mensajes mediante conexiones WebSocket, permitiendo actualizaciones en tiempo real sin necesidad de recargar la página.",
+          "El backend expone endpoints REST para autenticación y operaciones de datos mientras mantiene canales de comunicación persistentes mediante WebSockets para la transmisión de mensajes y el seguimiento de presencia de usuarios. Los datos de conversaciones y mensajes se almacenan en una base de datos PostgreSQL gestionada a través de Supabase, garantizando persistencia confiable y un modelo relacional estructurado."
+        ],
+        "images": []
+      },
+      "liveUrl": "https://app-de-mensajeria.netlify.app/",
+      "repoUrl": [
+        "https://github.com/FrancoGuze/chat-app-frontend",
+        "https://github.com/FrancoGuze/chat-app-backend"
+      ]
+    },
+    {
+      "key": "ecommerce-dashboard-ui",
+      "title": "Demo de Dashboard Analítico en Next.js",
+      "description": "Prototipo de dashboard analítico enfocado en UI construido con Next.js y TypeScript, que muestra una interfaz basada en componentes para visualizar métricas operativas y gráficos interactivos utilizando Recharts. El proyecto enfatiza módulos reutilizables de UI, layouts responsivos y renderizado eficiente del lado del cliente.",
+      "image": "/photos/ecommerce-dashboard-fg.vercel.app.png",
+      "tags": [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "TailwindCSS",
+        "Recharts",
+        "UI Architecture",
+        "Data Visualization",
+        "Dashboard UI",
+        "AI-assisted Development"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este proyecto es un prototipo de dashboard analítico enfocado en la interfaz de usuario desarrollado con Next.js y TypeScript. La interfaz simula un panel administrativo con múltiples componentes reutilizables, incluyendo tarjetas de métricas, gráficos y secciones de layout responsivas diseñadas para mostrar información operativa de forma clara y estructurada.",
+          "La interfaz también se adapta automáticamente al esquema de colores del sistema del usuario mediante theming basado en CSS, permitiendo soporte para modo claro y oscuro sin necesidad de controles manuales.",
+          "El dashboard también fue desarrollado como una exploración de flujos de trabajo de diseño de UI asistidos por IA. Las estructuras iniciales del layout fueron generadas con herramientas basadas en IA como V0 y posteriormente refinadas mediante ajustes iterativos en componentes, estilos y parámetros de layout, manteniendo control manual sobre el diseño y la estructura final."
+        ],
+        "images": []
+      },
+      "liveUrl": "https://ecommerce-dashboard-fg.vercel.app/",
+      "repoUrl": [
+        "https://github.com/FrancoGuze/ecommerce-dashboard"
+      ]
+    },
+    {
+      "key": "data-visualization-projects",
+      "title": "Visualización de Datos con D3.js",
+      "description": "Colección de proyectos interactivos de visualización de datos construidos con D3.js, enfocados en escalas dinámicas, renderizado con SVG y patrones de interacción basados en datos para representar conjuntos de datos complejos mediante gráficos y visualizaciones geográficas.",
+      "image": "/photos/francoguze.github.io_freeCodeCamp-data-visualization-projects.png",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "D3.js",
+        "SVG",
+        "Data Visualization",
+        "Data-driven UI",
+        "Interactive Charts"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este repositorio contiene un conjunto de cinco proyectos de visualización de datos creados como parte del programa de certificación de Data Visualization. Cada visualización está implementada con D3.js y se enfoca en construir gráficos directamente con elementos SVG, escalas dinámicas y manipulación del DOM basada en datos para transformar datasets en representaciones visuales interactivas.",
+          "Los proyectos incluyen múltiples tipos de gráficos como bar charts, scatterplots, mapas de calor, treemaps y un mapa geográfico coroplético. Estas implementaciones demuestran conceptos clave de D3 como escalado de ejes, mapeo de colores, tooltips interactivos y vinculación dinámica entre datos y elementos visuales.",
+          "Una de las visualizaciones más complejas técnicamente de la colección es el mapa coroplético, que renderiza datos geográficos utilizando TopoJSON y representa estadísticas educativas a través de condados de Estados Unidos mediante escalas de color. La implementación requirió combinar múltiples datasets y proyectarlos en una visualización geográfica basada en SVG utilizando las utilidades geoPath de D3."
+        ],
+        "images": []
+      },
+      "liveUrl": "https://francoguze.github.io/freeCodeCamp-data-visualization-projects/",
+      "repoUrl": [
+        "https://github.com/FrancoGuze/freeCodeCamp-data-visualization-projects"
+      ]
+    },
+    {
+      "key": "node-modules-cli",
+      "title": "CLI para Limpieza de Node Modules",
+      "description": "Herramienta de automatización por línea de comandos construida con Node.js y TypeScript para eliminar recursivamente directorios node_modules. La utilidad se enfoca en el recorrido del sistema de archivos, eliminación segura y mejora de la productividad del desarrollador al gestionar proyectos JavaScript de gran tamaño.",
+      "image": false,
+      "tags": [
+        "Node.js",
+        "TypeScript",
+        "CLI",
+        "Automation",
+        "Developer Tools",
+        "Filesystem",
+        "Scripting"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este proyecto es una herramienta de línea de comandos desarrollada con Node.js y TypeScript para automatizar la limpieza de directorios node_modules en distintos proyectos. La herramienta escanea recursivamente estructuras de carpetas e identifica dependencias que pueden eliminarse de forma segura, ayudando a los desarrolladores a liberar espacio en disco o reiniciar instalaciones de dependencias durante el desarrollo.",
+          "La implementación se centra en operaciones del sistema de archivos utilizando APIs de Node.js, incluyendo recorrido de directorios, estrategias de búsqueda recursiva y lógica de eliminación controlada. La interfaz CLI permite ejecutar el script rápidamente desde la terminal, demostrando experiencia práctica en la creación de herramientas de desarrollo y utilidades de automatización.",
+          "Este proyecto también sirvió como introducción al desarrollo de aplicaciones de línea de comandos en Node.js, explorando cómo los scripts pueden interactuar directamente con el sistema de archivos del sistema operativo y cómo TypeScript puede utilizarse para estructurar y mantener utilidades CLI."
+        ],
+        "images": []
+      },
+      "liveUrl": false,
+      "repoUrl": [
+        "https://github.com/FrancoGuze/node_modules-remove-CLI"
+      ]
+    }
+  ]
+}

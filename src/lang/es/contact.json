@@ -1,0 +1,22 @@
+﻿{
+  "eyebrow": "Contacto",
+  "title": "Trabajemos juntos",
+  "description": "Estoy abierto a oportunidades remotas, proyectos freelance y colaboraciones.",
+  "detailsEyebrow": "Detalles",
+  "locationLabel": "Ubicacion",
+  "locationFallback": "Remoto",
+  "availabilityLabel": "Disponibilidad",
+  "availabilityValue": "Disponible",
+  "availability": "Actualmente disponible para roles remotos full-time y proyectos freelance.",
+  "methodsEyebrow": "Links",
+  "methodsTitle": "Elige un canal",
+  "methodsDescription": "Selecciona el metodo que prefieras y respondere lo antes posible.",
+  "emailLabel": "Gmail",
+  "emailCta": "Enviar email",
+  "linkedinLabel": "LinkedIn",
+  "linkedinCta": "Conectar en LinkedIn",
+  "githubLabel": "GitHub",
+  "githubCta": "Ver repositorios",
+  "phoneLabel": "Telefono",
+  "phoneCta": "Llamar o WhatsApp"
+}

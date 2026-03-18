@@ -1,0 +1,36 @@
+{
+  "eyebrow": "Skills",
+  "title": "Technologies I work with",
+  "description": "Technologies and tools I use to design, build, and deploy modern web applications.",
+  "groups": {
+    "core": {
+      "title": "Core Stack",
+      "items": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind",
+        "Node.js",
+        "PostgreSQL"
+      ]
+    },
+    "supporting": {
+      "title": "Other technologies",
+      "items": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Sass",
+        "Bootstrap",
+        "MongoDB",
+        "REST APIs",
+        "Docker",
+        "Git",
+        "Figma",
+        "AWS",
+        "WordPress",
+        "D3"
+      ]
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "about": "Sobre mí",
+  "skills": "Habilidades",
+  "projects": "Proyectos",
+  "contact": "Contacto",
+  "openMenu": "Abrir menú",
+  "closeMenu": "Cerrar menú",
+  "theme": {
+    "current": "Actual: modo {{theme}}",
+    "switchTo": "Cambiar a modo {{theme}}",
+    "light": "claro",
+    "dark": "oscuro",
+    "system": "sistema"
+  },
+  "language": {
+    "current": "Idioma actual: {{language}}",
+    "switchTo": "Cambiar a {{language}}",
+    "english": "Inglés",
+    "spanish": "Español"
+  }
+}

@@ -1,0 +1,21 @@
+{ 
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "theme": {
+        "current": "Current: {{theme}} mode",
+        "switchTo": "Switch to {{theme}} mode",
+        "light": "light",
+        "dark": "dark",
+        "system": "system"
+    },
+    "language": {
+        "current": "Current language: {{language}}",
+        "switchTo": "Switch to {{language}}",
+        "english": "English",
+        "spanish": "Spanish"
+    }
+}

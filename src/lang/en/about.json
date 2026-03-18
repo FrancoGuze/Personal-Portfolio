@@ -1,0 +1,15 @@
+{
+  "eyebrow": "About Me",
+  "title": "Full Stack Developer focused on clean architecture and scalability",
+  "imageAlt": "Portrait photo",
+  "paragraphs": [
+    "I am a Full Stack Developer with experience building complete web applications from frontend interfaces to backend services. I work with React, TypeScript, Node.js, and relational/non-relational databases, applying clean architecture principles and scalable design patterns.",
+    "I focus on writing maintainable code, designing clear APIs, and delivering performant user experiences. I am comfortable working across the full development lifecycle, from planning and implementation to deployment."
+  ],
+  "highlights": {
+    "location": {
+      "label": "Location",
+      "value": "Argentina"
+    }
+  }
+}

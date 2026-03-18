@@ -1,0 +1,36 @@
+﻿{
+  "eyebrow": "Habilidades",
+  "title": "Tecnologías con las que trabajo",
+  "description": "Un conjunto de herramientas y frameworks que uso para llevar ideas a la realidad, desde interfaces frontend hasta sistemas backend.",
+  "groups": {
+    "core": {
+      "title": "Core Stack",
+      "items": [
+        "React",
+        "TypeScript",
+        "Tailwind",
+        "Next.js",
+        "Node.js",
+        "PostgreSQL"
+      ]
+    },
+    "supporting": {
+      "title": "Otras tecnologías",
+      "items": [
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Sass",
+        "Bootstrap",
+        "MongoDB",
+        "REST APIs",
+        "Docker",
+        "Git",
+        "Figma",
+        "AWS",
+        "WordPress",
+        "D3"
+      ]
+    }
+  }
+}

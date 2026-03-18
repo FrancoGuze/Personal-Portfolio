@@ -1,0 +1,15 @@
+﻿{
+  "eyebrow": "Sobre mí",
+  "title": "Un desarrollador que cuida el oficio",
+  "imageAlt": "Foto de perfil",
+  "paragraphs": [
+    "Soy Desarrollador Full Stack con experiencia construyendo aplicaciones web completas, desde interfaces frontend hasta servicios backend. Trabajo con React, TypeScript, Node.js y bases de datos relacionales/no relacionales, aplicando principios de arquitectura limpia y patrones de diseño escalables.",
+    "Me enfoco en escribir código mantenible, diseñar APIs claras y entregar experiencias de usuario performantes. Me siento cómodo trabajando en todo el ciclo de desarrollo, desde la planificación e implementación hasta el despliegue."
+  ],
+  "highlights": {
+    "location": {
+      "label": "Ubicación",
+      "value": "Argentina, Córdoba"
+    }
+  }
+}
