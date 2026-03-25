@@ -5,6 +5,7 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/Personal-Portfolio/',
   server: { allowedHosts:['nonerroneously-nonelliptic-shaunna.ngrok-free.dev'] },
   plugins: [react(), tailwindcss()], resolve: {
     alias: {
