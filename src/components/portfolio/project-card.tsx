@@ -38,7 +38,7 @@ export function ProjectCard({
 
   
   return (
-    <div className={`flex h-44 items-stretch gap-6 overflow-hidden rounded-lg border border-border bg-card/80 ${className ?? ""}`}>
+    <div className={`flex h-44 items-stretch gap-6 overflow-hidden rounded-lg border border-border hover:border-detail/30 bg-card/80 transition-all duration-75 ${className ?? ""}`}>
       {image ? (
         <img
           src={image}

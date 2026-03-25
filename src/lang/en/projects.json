@@ -14,7 +14,7 @@
     {
       "key": "appointment-management-platform",
       "description": "Full-stack appointment scheduling platform built with Next.js and TypeScript, combining frontend and server-side API routes in a unified architecture. The system supports role-based authentication, automated appointment slot generation via GitHub Actions, and persistent data management with PostgreSQL through Supabase.",
-      "image": "/images/projects/appointment-management-platform.png",
+      "image": "/photos/appointment-management-platform.vercel.png",
       "tags": [
         "Next.js",
         "React",
@@ -33,7 +33,16 @@
           "To automate schedule management, GitHub Actions are used to periodically generate new appointment slots based on predefined rules. This background automation ensures continuous availability updates without manual intervention, demonstrating an integration between CI workflows and application-level data operations.",
           "The project was also developed as an exploration of AI-assisted development workflows using a CLI-based coding assistant. Structured prompts, contextual project information, and iterative instructions were used to guide development tasks and refactoring while maintaining manual control over architectural decisions and overall system design."
         ],
-        "images": []
+        "images": [
+          "/photos/appointment-management-platform.vercel.png",
+          "/photos/appointment-management-platform.vercel.app_.png",
+          "/photos/appointment-management-platform.vercel.app_ (1).png",
+          "/photos/appointment-management-platform.vercel.app_admin.png",
+          "/photos/appointment-management-platform.vercel.app_admin_users-management.png",
+          "/photos/appointment-management-platform.vercel.app_admin_users-management (1).png",
+          "/photos/appointment-management-platform.vercel.app_professional.png",
+          "/photos/appointment-management-platform.vercel.app_professional (1).png"
+        ]
       },
       "liveUrl": "https://appointment-management-platform.vercel.app/",
       "repoUrl": [
@@ -44,7 +53,7 @@
       "key": "videochat-app",
       "title": "Video Chat App (WebRTC)",
       "description": "Peer-to-peer video communication platform built with WebRTC for real-time media streaming and Socket.io for signaling between clients. The system manages connection negotiation, session lifecycle events, and dynamic media stream updates within a responsive React interface.",
-      "image": "/photos/videochatappfrontend.netlify.app.png",
+      "image": "/photos/videochatappfrontend.netlify.app_.png",
       "tags": [
         "React",
         "Tailwindcss",
@@ -62,7 +71,10 @@
           "Native browser APIs for audio and video streams were used to control microphone and camera states for each participant. When a user toggles their media devices, signaling events propagate the update so connected peers can adjust the streams they receive. A key challenge was implementing the signaling workflow required for WebRTC negotiation, including offer and answer exchanges and connection lifecycle handling between peers.",
           "The connection process also handles ICE candidate exchange between peers to discover viable network paths for establishing the direct P2P connection. Candidate information is relayed through the signaling server so both clients can progressively test and select the most suitable route, enabling stable communication across different network environments such as NAT or mobile connections."
         ],
-        "images": []
+        "images": [
+          "/photos/videochatappfrontend.netlify.app_.png",
+          "/photos/videochatappfrontend.netlify.app_ (1).png"
+        ]
       },
       "liveUrl": "https://videochatappfrontend.netlify.app/",
       "repoUrl": [
@@ -74,7 +86,7 @@
       "key": "chat-app",
       "title": "Real-Time Chat Application",
       "description": "Full-stack real-time messaging platform built with a React and TypeScript client and a Node.js/Express backend. The system combines REST APIs and WebSocket-based communication to deliver instant messaging, user presence updates, and persistent conversation history backed by PostgreSQL.",
-      "image": "/photos/app-de-mensajeria.netlify2.png",
+      "image": "/photos/app-de-mensajeria.netlify.app_.png",
       "tags": [
         "React",
         "Tailwindcss",
@@ -91,7 +103,12 @@
           "This project implements a real-time chat system using a client–server architecture where a React frontend communicates with a Node.js and Express backend. The application supports authentication, user sessions, conversation management, and instant message delivery through WebSocket connections, enabling real-time updates without requiring page refreshes.",
           "The backend exposes REST endpoints for authentication and data operations while maintaining persistent communication channels through WebSockets for message broadcasting and presence tracking. Conversation and message data are stored in a PostgreSQL database managed through Supabase services, ensuring reliable persistence and structured relational modeling."
         ],
-        "images": []
+        "images": [
+          "/photos/app-de-mensajeria.netlify.app_.png",
+          "/photos/app-de-mensajeria.netlify.app_ (1).png",
+          "/photos/app-de-mensajeria.netlify.app_ (2).png",
+          "/photos/app-de-mensajeria.netlify.app_ (3).png"
+        ]
       },
       "liveUrl": "https://app-de-mensajeria.netlify.app/",
       "repoUrl": [
@@ -121,7 +138,9 @@
           "The interface also adapts automatically to the user's system color scheme using CSS-based theming, enabling seamless light and dark mode support without requiring manual toggles.",
           "The dashboard was also developed as an exploration of AI-assisted UI workflows. Initial layout structures were generated using AI-based tools such as V0, and further refined through iterative adjustments to components, styling, and layout parameters while maintaining manual control over the final design and structure."
         ],
-        "images": []
+        "images": [
+          "/photos/ecommerce-dashboard-fg.vercel.app.png"
+        ]
       },
       "liveUrl": "https://ecommerce-dashboard-fg.vercel.app/",
       "repoUrl": [
@@ -149,7 +168,9 @@
           "The projects include multiple chart types such as bar charts, scatterplots, heat maps, treemaps, and a geographic choropleth map. These implementations demonstrate key D3 concepts including axis scaling, color mapping, tooltip interactions, and responsive data binding between datasets and visual elements.",
           "One of the most technically complex visualizations in the collection is the choropleth map, which renders geographic data using TopoJSON and maps education statistics across U.S. counties using color scales. The implementation required combining multiple datasets and projecting them into an SVG-based geographic visualization using D3's geoPath utilities."
         ],
-        "images": []
+        "images": [
+          "/photos/francoguze.github.io_freeCodeCamp-data-visualization-projects.png"
+        ]
       },
       "liveUrl": "https://francoguze.github.io/freeCodeCamp-data-visualization-projects/",
       "repoUrl": [

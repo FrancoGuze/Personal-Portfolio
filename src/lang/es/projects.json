@@ -15,7 +15,7 @@
       "key": "appointment-management-platform",
       "title": "Plataforma de Gestión de Turnos",
       "description": "Plataforma full-stack de gestión de turnos construida con Next.js y TypeScript, que combina interfaz frontend y rutas de API del lado del servidor en una arquitectura unificada. El sistema incluye autenticación basada en roles, generación automática de turnos mediante GitHub Actions y persistencia de datos con PostgreSQL a través de Supabase.",
-      "image": "/images/projects/appointment-management-platform.png",
+      "image": "/photos/appointment-management-platform.vercel.png",
       "tags": [
         "Next.js",
         "React",
@@ -34,7 +34,16 @@
           "Para automatizar la gestión de horarios, se utilizan GitHub Actions que generan periódicamente nuevos turnos basados en reglas predefinidas. Esta automatización en segundo plano asegura la actualización continua de disponibilidad sin intervención manual, demostrando la integración entre flujos de CI y operaciones de datos a nivel de aplicación.",
           "El proyecto también fue desarrollado como una exploración de flujos de trabajo de desarrollo asistidos por IA utilizando un asistente de programación basado en CLI. Se utilizaron prompts estructurados, información contextual del proyecto e instrucciones iterativas para guiar tareas de desarrollo y refactorización, manteniendo al mismo tiempo control manual sobre las decisiones arquitectónicas y el diseño general del sistema."
         ],
-        "images": ["/images/projects/appointment-management-platform.png","/images/projects/appointment-management-platform.png","/images/projects/appointment-management-platform.png","/images/projects/appointment-management-platform.png"]
+        "images": [
+          "/photos/appointment-management-platform.vercel.png",
+          "/photos/appointment-management-platform.vercel.app_.png",
+          "/photos/appointment-management-platform.vercel.app_ (1).png",
+          "/photos/appointment-management-platform.vercel.app_admin.png",
+          "/photos/appointment-management-platform.vercel.app_admin_users-management.png",
+          "/photos/appointment-management-platform.vercel.app_admin_users-management (1).png",
+          "/photos/appointment-management-platform.vercel.app_professional.png",
+          "/photos/appointment-management-platform.vercel.app_professional (1).png"
+        ]
       },
       "liveUrl": "https://appointment-management-platform.vercel.app/",
       "repoUrl": [
@@ -45,7 +54,7 @@
       "key": "videochat-app",
       "title": "Aplicación de Videollamadas (WebRTC)",
       "description": "Plataforma de comunicación por video peer-to-peer construida con WebRTC para transmisión de medios en tiempo real y Socket.io para la señalización entre clientes. El sistema gestiona la negociación de conexión, los eventos del ciclo de vida de la sesión y la actualización dinámica de flujos de medios dentro de una interfaz React responsiva.",
-      "image": "/photos/videochatappfrontend.netlify.app.png",
+      "image": "/photos/videochatappfrontend.netlify.app_.png",
       "tags": [
         "React",
         "Tailwindcss",
@@ -63,7 +72,10 @@
           "Se utilizaron las APIs nativas del navegador para audio y video con el fin de controlar el estado del micrófono y la cámara de cada participante. Cuando un usuario activa o desactiva sus dispositivos multimedia, se envían eventos de señalización para que los pares conectados puedan actualizar los streams que reciben. Uno de los principales desafíos fue implementar el flujo de señalización necesario para la negociación de WebRTC, incluyendo el intercambio de ofertas y respuestas y la gestión del ciclo de vida de la conexión entre pares.",
           "El proceso de conexión también maneja el intercambio de candidatos ICE entre pares para descubrir rutas de red viables que permitan establecer la conexión P2P directa. La información de candidatos se transmite a través del servidor de señalización para que ambos clientes puedan probar progresivamente diferentes rutas y seleccionar la más adecuada, permitiendo una comunicación estable incluso en entornos de red complejos como NAT o conexiones móviles."
         ],
-        "images": []
+        "images": [
+          "/photos/videochatappfrontend.netlify.app_.png",
+          "/photos/videochatappfrontend.netlify.app_ (1).png"
+        ]
       },
       "liveUrl": "https://videochatappfrontend.netlify.app/",
       "repoUrl": [
@@ -75,7 +87,7 @@
       "key": "chat-app",
       "title": "Aplicación de Chat en Tiempo Real",
       "description": "Plataforma full-stack de mensajería en tiempo real construida con un cliente React y TypeScript y un backend Node.js/Express. El sistema combina APIs REST y comunicación basada en WebSockets para ofrecer mensajería instantánea, actualización de presencia de usuarios e historial persistente de conversaciones respaldado por PostgreSQL.",
-      "image": "/photos/app-de-mensajeria.netlify2.png",
+      "image": "/photos/app-de-mensajeria.netlify.app_.png",
       "tags": [
         "React",
         "Tailwindcss",
@@ -92,7 +104,12 @@
           "Este proyecto implementa un sistema de chat en tiempo real utilizando una arquitectura cliente-servidor donde un frontend en React se comunica con un backend construido con Node.js y Express. La aplicación incluye autenticación, sesiones de usuario, gestión de conversaciones y envío instantáneo de mensajes mediante conexiones WebSocket, permitiendo actualizaciones en tiempo real sin necesidad de recargar la página.",
           "El backend expone endpoints REST para autenticación y operaciones de datos mientras mantiene canales de comunicación persistentes mediante WebSockets para la transmisión de mensajes y el seguimiento de presencia de usuarios. Los datos de conversaciones y mensajes se almacenan en una base de datos PostgreSQL gestionada a través de Supabase, garantizando persistencia confiable y un modelo relacional estructurado."
         ],
-        "images": []
+        "images": [
+          "/photos/app-de-mensajeria.netlify.app_.png",
+          "/photos/app-de-mensajeria.netlify.app_ (1).png",
+          "/photos/app-de-mensajeria.netlify.app_ (2).png",
+          "/photos/app-de-mensajeria.netlify.app_ (3).png"
+        ]
       },
       "liveUrl": "https://app-de-mensajeria.netlify.app/",
       "repoUrl": [
@@ -122,7 +139,9 @@
           "La interfaz también se adapta automáticamente al esquema de colores del sistema del usuario mediante theming basado en CSS, permitiendo soporte para modo claro y oscuro sin necesidad de controles manuales.",
           "El dashboard también fue desarrollado como una exploración de flujos de trabajo de diseño de UI asistidos por IA. Las estructuras iniciales del layout fueron generadas con herramientas basadas en IA como V0 y posteriormente refinadas mediante ajustes iterativos en componentes, estilos y parámetros de layout, manteniendo control manual sobre el diseño y la estructura final."
         ],
-        "images": []
+        "images": [
+          "/photos/ecommerce-dashboard-fg.vercel.app.png"
+        ]
       },
       "liveUrl": "https://ecommerce-dashboard-fg.vercel.app/",
       "repoUrl": [
@@ -150,7 +169,9 @@
           "Los proyectos incluyen múltiples tipos de gráficos como bar charts, scatterplots, mapas de calor, treemaps y un mapa geográfico coroplético. Estas implementaciones demuestran conceptos clave de D3 como escalado de ejes, mapeo de colores, tooltips interactivos y vinculación dinámica entre datos y elementos visuales.",
           "Una de las visualizaciones más complejas técnicamente de la colección es el mapa coroplético, que renderiza datos geográficos utilizando TopoJSON y representa estadísticas educativas a través de condados de Estados Unidos mediante escalas de color. La implementación requirió combinar múltiples datasets y proyectarlos en una visualización geográfica basada en SVG utilizando las utilidades geoPath de D3."
         ],
-        "images": []
+        "images": [
+          "/photos/francoguze.github.io_freeCodeCamp-data-visualization-projects.png"
+        ]
       },
       "liveUrl": "https://francoguze.github.io/freeCodeCamp-data-visualization-projects/",
       "repoUrl": [

@@ -80,7 +80,7 @@ export function ContactSection() {
               >
                 <div className="flex items-start gap-3">
                   <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Mail className="size-5" />
+                    <Mail className="size-5 group-hover:stroke-detail/70" />
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-foreground">
@@ -105,7 +105,7 @@ export function ContactSection() {
               >
                 <div className="flex items-start gap-3">
                   <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Linkedin className="size-5" />
+                    <Linkedin className="size-5 group-hover:stroke-detail/70" />
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-foreground">
@@ -130,7 +130,7 @@ export function ContactSection() {
               >
                 <div className="flex items-start gap-3">
                   <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Github className="size-5" />
+                    <Github className="size-5 group-hover:stroke-detail/70" />
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-foreground">
@@ -153,7 +153,7 @@ export function ContactSection() {
               >
                 <div className="flex items-start gap-3">
                   <span className="flex size-10 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                    <Phone className="size-5" />
+                    <Phone className="size-5 group-hover:stroke-detail/70" />
                   </span>
                   <div>
                     <p className="text-sm font-semibold text-foreground">

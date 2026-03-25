@@ -11,7 +11,7 @@ export function SkillItem({ icon, name, className }: SkillItemProps) {
   return (
     <div
       className={cn(
-        "group flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 transition-all hover:border-primary/40 hover:bg-secondary",
+        "group flex flex-col items-center gap-3 rounded-xl border border-border bg-card p-6 transition-all hover:border-detail/70 hover:bg-secondary",
         className
       )}
     >
