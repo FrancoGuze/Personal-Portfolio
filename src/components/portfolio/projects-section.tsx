@@ -68,19 +68,29 @@ type ProjectsSectionProps = {
 
 export function ProjectsSection({ onInfo }: ProjectsSectionProps) {
   const { t } = useTranslation()
+  const baseUrl = import.meta.env.BASE_URL
+
+  const resolveAssetPath = (value: string) =>
+    value.startsWith("/") ? `${baseUrl}${value.slice(1)}` : value
 
   const projects = (t("projects.items", {
     returnObjects: true,
-  }) as ProjectItemRaw[]).map((project) => {
+  }) as ProjectItemRaw[]).map((project): ProjectItem => {
     const info = project["project-info"]
+    const image = project.image === false ? false : resolveAssetPath(project.image)
 
     return {
-      ...project,
+      key: project.key,
+      title: project.title,
+      description: project.description,
+      image,
+      tags: project.tags,
       liveUrl: project.liveUrl || undefined,
       repoUrl: project.repoUrl?.length ? project.repoUrl : undefined,
       projectInfo: {
         paragraphs: info?.paragraphs?.filter(Boolean) ?? [],
-        images: info?.images?.filter(Boolean) ?? [],
+        images:
+          info?.images?.filter(Boolean).map(resolveAssetPath) ?? [],
       },
     }
   })
