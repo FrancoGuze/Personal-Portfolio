@@ -96,7 +96,7 @@ export function ProjectsSection({ onInfo }: ProjectsSectionProps) {
   })
 
   // Proyectos destacados para mostrar usando la key
-  const featuredKeys = ["videochat-app", "chat-app", "appointment-management-platform"]
+  const featuredKeys = ["appointment-management-platform", "videochat-app", "chat-app", "minecraft-server-manager"]
   const featuredProjects = projects.filter((project) =>
     featuredKeys.includes(project.key)
   )

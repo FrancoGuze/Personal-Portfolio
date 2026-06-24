@@ -204,6 +204,66 @@
       "repoUrl": [
         "https://github.com/FrancoGuze/node_modules-remove-CLI"
       ]
+    },
+    {
+      "key": "discord-bot",
+      "title": "Bot de Discord con Arquitectura Modular",
+      "description": "Bot de Discord con arquitectura modular basada en cogs construido en Python usando discord.py. Organizado en features independientes para reproducción de música con yt-dlp, un sistema de ruleta y un módulo de ofertas. La feature de música implementa una capa de dominio con gestión de cola, búsqueda en YouTube y recomendaciones de canciones impulsadas por IA que se ejecutan de forma asíncrona en segundo plano.",
+      "image": false,
+      "tags": [
+        "Python",
+        "discord.py",
+        "yt-dlp",
+        "SQLite",
+        "Recomendaciones IA",
+        "Arquitectura Modular",
+        "Hugging Face",
+        "Asincronía"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este proyecto es un bot de Discord construido con Python y discord.py, estructurado alrededor de una arquitectura modular basada en cogs donde cada feature — reproducción de música, ruleta y ofertas — opera como un módulo independiente. El bot registra slash commands y los sincroniza de forma global usando la API de app commands de Discord, con una separación clara entre lógica de dominio, servicios y callbacks de UI específicos de Discord.",
+          "El módulo de música es la feature más compleja técnicamente, implementando un patrón de domain-driven design con capas dedicadas para gestión de estado, enums de transporte, reglas de navegación de cola y orquestación de reproducción. Integra yt-dlp para la resolución de fuentes de audio, soporta colas persistentes e incluye controles de reproducción como play, pause, skip y previous track con componentes reactivos de UI de Discord.",
+          "La feature de música también incluye un sistema de recomendaciones impulsado por IA que analiza las canciones agregadas por usuarios y genera sugerencias de temas similares en segundo plano usando un LLM. Las canciones recomendadas se resuelven a través de yt-dlp y se agregan a la cola sin interrumpir la reproducción, con protecciones para evitar ciclos de generación concurrentes y garantizar que solo canciones de origen usuario sirvan como seeds."
+        ],
+        "images": []
+      },
+      "liveUrl": false,
+      "repoUrl": [
+        "https://github.com/FrancoGuze/Discord_bot_python"
+      ]
+    }
+  ],
+  "_archived": [
+    {
+      "key": "minecraft-server-manager",
+      "title": "Sistema de Orquestación de Servidores Minecraft",
+      "description": "Sistema distribuido que combina una interfaz de bot de Discord con dos microservicios FastAPI: un servicio de automatización de teclas para acciones dentro del juego mediante eventos de teclado programados, y un gestor de servidores Minecraft basado en Docker que maneja el ciclo de vida de contenedores, aprovisionamiento dinámico, backups de mundo con graceful shutdown y registro de servidores en SQLite con modo WAL para concurrencia.",
+      "image": false,
+      "tags": [
+        "Python",
+        "discord.py",
+        "FastAPI",
+        "Docker",
+        "Docker SDK",
+        "SQLite",
+        "Pydantic",
+        "PyAutoGUI",
+        "Microservicios",
+        "Orquestación de Contenedores"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "Este proyecto es un sistema distribuido compuesto por tres servicios que se comunican a través de APIs REST, orquestados mediante un bot de Discord. La arquitectura separa las responsabilidades en una interfaz interactiva de Discord y dos microservicios FastAPI independientes: un servicio de automatización de teclas y un servicio de gestión de contenedores Docker, cada uno ejecutándose en su propio proceso y accesible a través de endpoints HTTP bien definidos.",
+          "El microservicio de automatización de teclas expone una API FastAPI que recibe configuraciones de keybinds desde el bot de Discord, las persiste en un archivo de configuración local y programa pulsaciones de teclas recurrentes usando un scheduler con threads y pyautogui. Cada keybind se define mediante tres parámetros: la tecla a presionar, una duración que controla cuánto tiempo se mantiene pulsada, y un intervalo que determina el tiempo entre repeticiones — permitiendo control preciso sobre acciones dentro del juego como mantener una tecla durante varios segundos cada pocos minutos. El sistema soporta operaciones de inicio, detención y consulta de estado, con el scheduler inactivo hasta que se activa explícitamente mediante un comando de Discord.",
+          "El microservicio de gestión de servidores provee control completo del ciclo de vida de contenedores Docker para servidores de Minecraft. Genera dinámicamente archivos docker-compose.yml con tipo de servidor configurable (Vanilla/Fabric), versión y asignación de memoria; asigna puertos disponibles automáticamente; registra instancias en una base de datos SQLite con modo WAL para acceso concurrente seguro; y soporta inicio, detención con graceful shutdown, reinicio, verificación de estado, backup de mundo vía save-all antes de la copia del filesystem, y eliminación completa de servidores con opción de remover datos y rollback en caso de fallos de aprovisionamiento."
+        ],
+        "images": []
+      },
+      "liveUrl": false,
+      "repoUrl": [
+        "https://github.com/FrancoGuze/Discord_bot-Minecraft_servers_manager"
+      ]
     }
   ]
 }

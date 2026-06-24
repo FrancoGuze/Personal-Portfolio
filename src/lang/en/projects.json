@@ -203,6 +203,66 @@
       "repoUrl": [
         "https://github.com/FrancoGuze/node_modules-remove-CLI"
       ]
+    },
+    {
+      "key": "discord-bot",
+      "title": "Discord Bot with Modular Architecture",
+      "description": "Discord bot with modular cog-based architecture built in Python using discord.py. Organized into independent features for music playback with yt-dlp, a roulette system, and an offers module. The music feature implements a domain-driven layer with queue management, YouTube search, and AI-powered song recommendations running asynchronously in the background.",
+      "image": false,
+      "tags": [
+        "Python",
+        "discord.py",
+        "yt-dlp",
+        "SQLite",
+        "AI Recommendations",
+        "Modular Architecture",
+        "Hugging Face",
+        "Asynchrony"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "This project is a Discord bot built with Python and discord.py, structured around a modular cog-based architecture where each feature — music playback, roulette, and offers — operates as an independent module. The bot registers slash commands and syncs them globally using Discord's app commands API, with a clean separation between domain logic, services, and Discord-specific UI callbacks.",
+          "The music module is the most technically complex feature, implementing a domain-driven design pattern with dedicated layers for state management, transport enums, queue navigation rules, and playback orchestration. It integrates yt-dlp for audio source resolution, supports persistent queues, and includes playback controls such as play, pause, skip, and previous track with reactive Discord UI components.",
+          "The music feature also includes an AI-powered recommendation system that analyzes songs added by users and generates similar track suggestions in the background using an LLM. Recommended tracks are resolved through yt-dlp and appended to the queue without interrupting playback, with safeguards to prevent concurrent generation cycles and ensure only user-sourced songs serve as seeds."
+        ],
+        "images": []
+      },
+      "liveUrl": false,
+      "repoUrl": [
+        "https://github.com/FrancoGuze/Discord_bot_python"
+      ]
+    }
+  ],
+  "_archived": [
+    {
+      "key": "minecraft-server-manager",
+      "title": "Minecraft Server Orchestration System",
+      "description": "Distributed system combining a Discord bot interface with two FastAPI microservices: a key automation service for in-game actions using scheduled keyboard events, and a Docker-based Minecraft server manager that handles container lifecycle, dynamic provisioning, world backups with graceful shutdown, and server registration in SQLite with WAL-mode concurrency.",
+      "image": false,
+      "tags": [
+        "Python",
+        "discord.py",
+        "FastAPI",
+        "Docker",
+        "Docker SDK",
+        "SQLite",
+        "Pydantic",
+        "PyAutoGUI",
+        "Microservices",
+        "Container Orchestration"
+      ],
+      "project-info": {
+        "paragraphs": [
+          "This project is a distributed system composed of three services that communicate via REST APIs, orchestrated through a Discord bot. The architecture separates concerns into an interactive Discord interface and two independent FastAPI microservices: a key automation service and a Docker container management service, each running in its own process and accessible through well-defined HTTP endpoints.",
+          "The key automation microservice exposes a FastAPI API that receives keybind configurations from the Discord bot, persists them to a local config file, and schedules recurring keyboard presses using a threaded scheduler with pyautogui. Each keybind is defined by three parameters: the key to press, a duration controlling how long the key is held down, and an interval setting the time between repetitions — allowing precise control over in-game actions such as holding a key for several seconds every few minutes. The system supports start, stop, and status queries, with the scheduler remaining idle until explicitly activated via a Discord command.",
+          "The server management microservice provides full Docker container lifecycle control for Minecraft servers. It dynamically generates docker-compose.yml files with configurable server type (Vanilla/Fabric), version, and memory allocation; assigns available ports automatically; registers instances in a SQLite database with WAL mode for concurrency-safe access; and supports container start, stop with graceful shutdown, restart, status checks, world backup via save-all before filesystem copy, and full server deletion with optional data removal and rollback on provisioning failures."
+        ],
+        "images": []
+      },
+      "liveUrl": false,
+      "repoUrl": [
+        "https://github.com/FrancoGuze/Discord_bot-Minecraft_servers_manager"
+      ]
     }
   ]
 }
