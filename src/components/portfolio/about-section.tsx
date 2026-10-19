@@ -1,11 +1,11 @@
-import {  MapPin } from "lucide-react"
+import { MapPin } from "lucide-react"
 import { useTranslation } from "react-i18next"
 import { myData } from "@/lib/myData"
 export function AboutSection() {
   const { t } = useTranslation()
   const paragraphs = t("about.paragraphs", { returnObjects: true }) as string[]
   const highlights = [
- 
+
     {
       icon: MapPin,
       label: myData.residence.country,
@@ -20,7 +20,7 @@ export function AboutSection() {
         <div className="relative mx-auto w-full max-w-md lg:mx-0">
           <div className="aspect-4/5 overflow-hidden rounded-2xl border border-border bg-secondary">
             <img
-              src="/images/portrait.jpg"
+              src={`${import.meta.env.BASE_URL}photos/me.jpg`}
               alt={t("about.imageAlt")}
               width={480}
               height={600}
